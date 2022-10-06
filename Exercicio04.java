@@ -1,19 +1,25 @@
-package aula13Exercicios;
+package com.loiane.cursojava.aulaExercicios15;
 
 import java.util.Scanner;
 
 public class Exercicio04 {
 
 	public static void main(String[] args) {
-		//4. Faça um Programa que peça as 4 notas bimestrais e mostre a média.
-		int n1,n2,n3,n4,media;
-		Scanner ler = new Scanner(System.in);
-		System.out.print(" Digite suas quatro notas : ");
-		n1 = ler.nextInt(); n2 = ler.nextInt(); n3 = ler.nextInt(); n4 = ler.nextInt();
-		media = (n1+n2+n3+n4)/4;
-		System.out.println(" Sua media é de "+media);
+		//4- Faça um Programa que verifique se uma letra digitada é vogal ou consoante.
 		
-		ler.close();
+		Scanner ler = new Scanner(System.in);
+		System.out.println(" Digite a letra : ");
+		String letra = ler.next();
+		
+		if (letra.equalsIgnoreCase("a,e,i,o,u")) 
+		{
+			System.out.println(" A letra "+letra+ "é uma vogal.");
+		} else 
+		{
+			System.out.println(" A letra " +letra + " é uma consuante");
+		}
+					ler.close();
+		
 	}
 
 }
