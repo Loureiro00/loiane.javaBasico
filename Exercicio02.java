@@ -1,37 +1,43 @@
-package com.loiane.cursojava.aulaExercicios17;
+package com.loiane.cursojava.aulaExercicios19;
 
 import java.util.Scanner;
 
 public class Exercicio02 {
 
 	public static void main(String[] args) {
-		/*Faça um programa que leia um nome de usuário e a sua senha e não
-		aceite a senha igual ao nome do usuário, mostrando uma mensagem
-		de erro e voltando a pedir as informações
-        */
+		/*Criar um vetor A com 8 elementos inteiros. Construir um vetor B de mesmo tipo
+		 * e tamanho e com os elementos do vetor A multiplicados por 2, ou seja: B[i] =
+		 * A[i] * 2.
+		 * 
+		 */
 		Scanner ler = new Scanner(System.in);
-		boolean infValidas=false;
-		
-		do {
-		System.out.println(" digite seu usuario : ");
-		String usuario = ler.next();
-		System.out.println(" digite sua senha   : ");
-		String senha = ler.next();
-			
-		  if (usuario.equalsIgnoreCase(senha)) 
-		{
-			//infValidas = false;
-			System.out.println(" escolha outra senha diferente do nome de usuário : ");
-		}	 
-		  else 
-		{
-			 infValidas = true; 
-			System.out.println(" Senha e usuario válidos");
-		}
-		  
-		} while (!infValidas);
+		int VetorA [] = new int [8];
+		int VetorB [] = new int [VetorA.length];
 	
-	ler.close();
+		for(int i =0; i<VetorA.length; i++) 
+		{
+			System.out.print(" Entre com o valor da posição "+i+" : ");
+			VetorA[i]= ler.nextInt();
+			VetorB[i]= VetorA[i]*2;
+		}
+		
+		System.out.println(" Vetor A = ");
+		for(int i =0; i<VetorA.length; i++) {
+			System.out.println(" \t "+VetorA[i]+" " );
+		}
+	
+		System.out.println(" ");
+		
+		System.out.println(" Vetor B = ");
+		for(int i =0; i<VetorB.length; i++) {
+			System.out.println(" \t "+VetorB[i]+" " );
+		}
+		
+		
+		System.out.print(" ");
+		
+		ler.close();	
+
 	}
 
 }
